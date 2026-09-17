@@ -8,7 +8,7 @@
     const [courses, setCourses] = useState([]);
 
          const fetchCourses = useCallback(async () => {
-            const response = await axios.get("https://study-tracker-api-gkpc.onrender.com");
+            const response = await axios.get("https://study-tracker-api-gkpc.onrender.com/courses");
             setCourses(response.data);
          }, []);
 
