@@ -19,7 +19,7 @@ function DashboardPage() {
     return (
         <div className="flex flex-col gap-8">
       <h2 className="text-2xl font-bold text-gray-800">Dashboard</h2>
-<div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+<div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
       <StatCard label="Total courses" value={totalCourses} />
       <StatCard label="Completed" value={completedCourses} />
       <StatCard label="Progress" value={`${overallProgress}%`} />

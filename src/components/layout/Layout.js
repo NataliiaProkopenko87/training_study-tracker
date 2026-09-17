@@ -6,7 +6,7 @@ function Layout({children}) {
         <Sidebar />
         <div className="flex flex-col flex-1">
             <Header />
-            <div className="p-8">
+            <div className="p-4 md:p-8">
                 {children}
                 </div>
         </div>

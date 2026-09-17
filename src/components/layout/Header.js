@@ -8,14 +8,14 @@ function Header({userName = 'Leonardo'}) {
   const {navigate} = useNavigation();
 
   return (
-    <div className="w-full bg-white dark:bg-gray-800 shadow-sm px-8 py-4 flex items-center justify-between">
+    <div className="w-full bg-white dark:bg-gray-800 shadow-sm px-4 md:px-8 py-4 flex items-center justify-between">
 
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-2 md:gap-4">
         <span className="text-gray-400 dark:text-gray-500 text-sm font-medium">Label</span>
-        <span className="text-gray-800 dark:text-gray-100 font-semibold">Welcome, {userName}!</span>
+        <span className="text-gray-800 dark:text-gray-100 font-semibold text-sm md:text-base">Welcome, {userName}!</span>
       </div>
 
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-2 md:gap-4">
         <Button 
           onClick={() => navigate('/courses')}
           variant="primary"

@@ -16,18 +16,18 @@ const renderedLinks = links.map((link) => {
             className="text-gray-600 dark:text-gray-300 hover:text-blue-500 py-2 px-4 rounded-lg hover:bg-blue-50 transition-colors"
             activeClassName="text-blue-600 font-semibold bg-blue-50 dark:bg-gray-700"
         >
-            {link.label}
+            <span className="hidden md:block">{link.label}</span>
         </Link>
     );
 });
 
     return (
-        <div className="w-64 min-h-screen bg-white dark:bg-gray-800 shadow-md flex flex-col p-6 gap-8">
+        <div className="w-16 md:w-64 min-h-screen bg-white dark:bg-gray-800 shadow-md flex flex-col p-6 gap-8">
                 <div className="flex flex-col items-center gap-2">
                 <div className="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center text-2x1">
                     👤
                 </div>
-                <p className="text-gray-700 font-medium">John Doe</p>
+                <p className="hidden md:block text-gray-700 font-medium">John Doe</p>
                 </div>
 
             <nav className="flex flex-col gap-1">
