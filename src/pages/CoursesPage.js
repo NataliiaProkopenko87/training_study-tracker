@@ -13,6 +13,10 @@ function CoursesPage() {
         completedLessons: ""
     });
 
+    if(!courses || !Array.isArray(courses) || courses.length === 0) {
+        return <div className="text-gray-500 p-8">Loading...</div>
+    }
+    
     const handleSubmit = () => {
     if(!form.title || !form.totalLessons) return;
     createCourse(form.title, Number(form.totalLessons), Number(form.completedLessons) || 0);

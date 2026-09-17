@@ -5,6 +5,10 @@ import LessonCheckList from "../components/courses/LessonCheckList";
 function StatisticsPage() {
     const { courses } = useCourses();
 
+    if(!courses || !Array.isArray(courses) || courses.length === 0) {
+        return <div className="text-gray-500 p-8">Loading...</div>
+    }
+
     if(!courses || courses.length === 0) {
         return <div className="text-gray-500">
             Loading...
