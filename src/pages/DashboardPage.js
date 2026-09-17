@@ -4,6 +4,10 @@ import StatCard from '../components/common/StatCard';
 
 function DashboardPage() {
     const {courses} = useCourses();
+
+    if(!courses || !Array.isArray(courses) || courses.length === 0) {
+        return <div className="text-gray-500 p-8">Loading...</div>
+    }
     const totalCourses = courses.length;
     const completedCourses = courses.filter(
         (course) => course.completedLessons === course.totalLessons).length;
