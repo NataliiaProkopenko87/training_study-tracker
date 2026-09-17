@@ -10,12 +10,11 @@ import Layout from "./components/layout/Layout";
 
 
 function App() {
-
-  const {fetchCourses} = useCourses();
+const {fetchCourses} = useCourses();
 
   useEffect(() => {
     fetchCourses();
-  }, [fetchCourses]);
+  }, []);
 
 
 
