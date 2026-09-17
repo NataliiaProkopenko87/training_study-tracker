@@ -8,12 +8,12 @@
     const [courses, setCourses] = useState([]);
 
          const fetchCourses = useCallback(async () => {
-            const response = await axios.get("http://localhost:3001/courses");
+            const response = await axios.get("https://study-tracker-api-gkpc.onrender.com");
             setCourses(response.data);
          }, []);
 
          const createCourse = async (title, totalLessons, completedLessons) => {
-              const response = await axios.post("http://localhost:3001/courses", 
+              const response = await axios.post("https://study-tracker-api-gkpc.onrender.com/courses", 
                 { title, totalLessons, completedLessons });
               
               setCourses([...courses, response.data]);
@@ -21,13 +21,13 @@
 
          const updateCourse = async (id, updatedCourse) => {
               const response = await 
-              axios.put(`http://localhost:3001/courses/${id}`, 
+              axios.put(`https://study-tracker-api-gkpc.onrender.com/courses/${id}`, 
                 updatedCourse);
               setCourses(courses.map((course) => (course.id === id ? response.data : course)));
          };
 
          const deleteCourse = async (id) => {
-                await axios.delete(`http://localhost:3001/courses/${id}`);
+                await axios.delete(`https://study-tracker-api-gkpc.onrender.com/courses/${id}`);
                 setCourses(courses.filter((course) => course.id !== id));
          }
 
